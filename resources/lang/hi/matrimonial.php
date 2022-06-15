@@ -9,7 +9,7 @@ return [
     'about' => 'हमारे बारे में',
     'contact' => 'संपर्क करें',
     'language' => 'भाषा',
-    'en' => 'अंग्रेज़ी',
+    'en' => 'English',
     'hi' => 'हिन्दी',
     'add' => 'दांपत्य जोड़े',
     // Page Links End
