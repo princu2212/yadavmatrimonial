@@ -13,7 +13,8 @@ Route::get('/dashboard', function () {
 });
 
 // Frontend All Routes
-Route::group(['prefix' => '{language?}'], function () {
+Route::redirect('/', '/hi');
+Route::group(['prefix' => '{language}'], function () {
     Route::controller(IndexController::class)->group(function () {
         Route::get('/', 'index')->name('index');
         Route::get('/all/matrimonial', 'allMatrimonial')->name('all.matrimonial');
