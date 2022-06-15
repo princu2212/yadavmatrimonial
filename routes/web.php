@@ -2,8 +2,8 @@
 
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\MatrimonialController;
-use App\Http\Controllers\Backend\ContactController;
 use App\Http\Controllers\Backend\FooterController;
+use App\Http\Controllers\Backend\MessageController;
 use App\Http\Controllers\Backend\SlideController;
 use App\Http\Controllers\Frontend\IndexController;
 use Illuminate\Support\Facades\Route;
@@ -14,7 +14,7 @@ Route::get('/dashboard', function () {
 
 // Frontend All Routes
 Route::redirect('/', '/hi');
-Route::group(['prefix' => '{language}'], function () {
+Route::group(['prefix' => '{language?}'], function () {
     Route::controller(IndexController::class)->group(function () {
         Route::get('/', 'index')->name('index');
         Route::get('/all/matrimonial', 'allMatrimonial')->name('all.matrimonial');
@@ -49,7 +49,7 @@ Route::controller(BlogController::class)->group(function () {
 });
 
 Route::controller(SlideController::class)->group(function () {
-    Route::get('/slide', 'create')->name('slide');
+    Route::get('/slide/create', 'create')->name('slide');
     Route::post('/slide/store', 'store')->name('slide.store');
     Route::get('/slide/show', 'show')->name('slide.show');
     Route::get('/slide/edit/{id}', 'edit')->name('slide.edit');
@@ -57,11 +57,11 @@ Route::controller(SlideController::class)->group(function () {
     Route::delete('/slide/destroy/{id}', 'destroy')->name('slide.destroy');
 });
 
-Route::controller(ContactController::class)->group(function () {
-    Route::get('/contact/create', 'create')->name('contact.create');
-    Route::post('/contact/store', 'store')->name('contact.store');
-    Route::get('/contact/show/{id}', 'show')->name('contact.show');
-    Route::delete('/contact/destroy/{id}', 'destroy')->name('contact.destroy');
+Route::controller(MessageController::class)->group(function () {
+    Route::get('/message/create', 'create')->name('message.create');
+    Route::post('/message/store', 'store')->name('message.store');
+    Route::get('/message/show/{id}', 'show')->name('message.show');
+    Route::delete('/message/destroy/{id}', 'destroy')->name('message.destroy');
 });
 
 Route::controller(FooterController::class)->group(function () {

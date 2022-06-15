@@ -45,36 +45,36 @@
 
                                 <tbody>
                                     @php($i = 1)
-                                    @foreach ($contact as $message)
+                                    @foreach ($message as $item)
                                         <tr>
                                             <td>{{ $i++ }}</td>
-                                            <td>{{ $message->name }}</td>
-                                            <td>{{ $message->email }}</td>
-                                            <td>{{ $message->phone }}</td>
-                                            <td>{{ $message->subject }}</td>
-                                            <td>{{ $message->message }}</td>
-                                            <td>{{ Carbon\Carbon::parse($message->created_at)->diffForHumans() }}</td>
+                                            <td>{{ $item->name }}</td>
+                                            <td>{{ $item->email }}</td>
+                                            <td>{{ $item->phone }}</td>
+                                            <td>{{ $item->subject }}</td>
+                                            <td>{{ $item->message }}</td>
+                                            <td>{{ Carbon\Carbon::parse($item->created_at)->diffForHumans() }}</td>
                                             <td>
                                                 <div class="dropdown text-center">
-                                                    <a class="dropdown-button" id="dropdown-menu-{{ $message->id }}"
+                                                    <a class="dropdown-button" id="dropdown-menu-{{ $item->id }}"
                                                         data-bs-toggle="dropdown" aria-expanded="false">
                                                         <i class="fa fa-ellipsis-v"></i>
                                                     </a>
                                                     <div class="dropdown-menu"
-                                                        aria-labelledby="dropdown-menu-{{ $message->id }}">
+                                                        aria-labelledby="dropdown-menu-{{ $item->id }}">
                                                         <a class="dropdown-item"
-                                                            href="{{ route('contact.show', $message->id) }}">
+                                                            href="{{ route('message.show', $item->id) }}">
                                                             <i class="fa fa-eye"></i>
                                                             {{ trans('View') }}
                                                         </a>
-                                                        <form id="delete-{{ $message->id }}"
-                                                            action="{{ route('contact.destroy', $message->id) }}"
+                                                        <form id="delete-{{ $item->id }}"
+                                                            action="{{ route('message.destroy', $item->id) }}"
                                                             method="POST">
                                                             @method('DELETE')
                                                             @csrf
                                                         </form>
                                                         <a class="dropdown-item" href="#"
-                                                            onclick="if(confirm('{{ trans('Are you sure to delete?') }}')) document.getElementById('delete-{{ $message->id }}').submit()">
+                                                            onclick="if(confirm('{{ trans('Are you sure to delete?') }}')) document.getElementById('delete-{{ $item->id }}').submit()">
                                                             <i class="fa fa-trash"></i>
                                                             {{ trans('Delete') }}
                                                         </a>

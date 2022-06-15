@@ -72,7 +72,8 @@
                 </li>
 
                 <li class="menu-title">Pages</li>
-                <li><a href="{{ route('contact.create') }}"><i class="ri-mail-line"></i>Contact Message</a></li>
+                <li><a href="{{ route('contact.create') }}"><i class="ri-user-add-line"></i>Contact Persons</a></li>
+                <li><a href="{{ route('message.create') }}"><i class="ri-mail-line"></i>Messages</a></li>
                 <li><a href="{{ route('footer.create') }}"><i class="ri-layout-bottom-line"></i>Footer</a></li>
 
                 <li class="menu-title">Role and Permission</li>

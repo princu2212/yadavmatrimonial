@@ -31,7 +31,7 @@
             </div>
 
             <div class="col-lg-8 mt-5 mt-lg-0">
-                <form action="{{ route('contact.store', app()->getLocale()) }}" method="POST" class="php-email-form">
+                <form action="{{ route('message.store', app()->getLocale()) }}" method="POST" class="php-email-form">
                     @csrf
                     <div class="row">
                         <div class="col-md-6 form-group">
