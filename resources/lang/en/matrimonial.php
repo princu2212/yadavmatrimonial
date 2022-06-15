@@ -10,7 +10,7 @@ return [
     'contact' => 'Contact',
     'language' => 'Language',
     'en' => 'English',
-    'hi' => 'Hindi',
+    'hi' => 'हिन्दी',
     'add' => 'Add Bride/Groom',
     // Page Links End
 
