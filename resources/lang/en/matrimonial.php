@@ -17,6 +17,7 @@ return [
     // Section Title Start
     'btitle' => 'Recent News and Events',
     'mtitle' => 'Groom | Bride List',
+    'ctitle' => 'FOR GENERAL ENQUIRY',
     // Section Title End
 
     // Matrimonial Page Start

@@ -72,7 +72,17 @@
                 </li>
 
                 <li class="menu-title">Pages</li>
-                <li><a href="{{ route('contact.create') }}"><i class="ri-user-add-line"></i>Contact Persons</a></li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-team-line"></i>
+                        <span>Contact Members</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('contact.create') }}"><i class="ri-user-add-line"></i>Add Member</a>
+                        </li>
+                        <li><a href="{{ route('contact.show') }}"><i class="ri-eye-line"></i>View Members</a></li>
+                    </ul>
+                </li>
                 <li><a href="{{ route('message.create') }}"><i class="ri-mail-line"></i>Messages</a></li>
                 <li><a href="{{ route('footer.create') }}"><i class="ri-layout-bottom-line"></i>Footer</a></li>
 

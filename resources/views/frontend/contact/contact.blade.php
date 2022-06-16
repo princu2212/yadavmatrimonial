@@ -4,84 +4,54 @@
 @endsection
 
 @section('content')
+    @php
+    $members = App\Models\ContactMember::latest()->get();
+    @endphp
     <main id="main">
 
         <!-- ======= Breadcrumbs ======= -->
         <section id="breadcrumbs" class="breadcrumbs">
             <div class="container">
-
                 <ol>
                     <li><a href="{{ route('index', app()->getLocale()) }}">@lang('matrimonial.home')</a></li>
                     <li>Contact</li>
                 </ol>
                 <h2>@lang('matrimonial.contact')</h2>
-
             </div>
         </section><!-- End Breadcrumbs -->
-        <section id="testimonials" class="testimonials section-bg">
-            <div class="container aos-init aos-animate" data-aos="fade-up">
 
+        <!-- ======= Testimonials Section ======= -->
+        <section id="testimonials" class="testimonials section-bg">
+            <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2>Contact</h2>
-                    <p>FOR GENERAL ENQUIRY</p>
+                    <p>@lang('matrimonial.ctitle')</p>
                 </div>
-
-                <div class="testimonials-slider swiper swiper-initialized swiper-horizontal swiper-pointer-events aos-init aos-animate"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <div class="swiper-wrapper" id="swiper-wrapper-bf522733e33b244d" aria-live="off"
-                        style="transform: translate3d(-3824px, 0px, 0px); transition-duration: 0ms;">
-                        <div class="swiper-slide" role="group" aria-label="1 / 5" style="width: 936px; margin-right: 20px;"
-                            data-swiper-slide-index="0">
-                            <div class="testimonial-wrap">
-                                <div class="testimonial-item">
-                                    <img src="{{ asset('frontend/img/testimonials/testimonials-1.jpg') }}"
-                                        class="testimonial-img" alt="">
-                                    <h3>Saul Goodman</h3>
-                                    <h4>Ceo &amp; Founder</h4>
-                                    <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
-                                        rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
-                                        risus at semper.
-                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                    </p>
+                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+                    <div class="swiper-wrapper">
+                        @foreach ($members as $item)
+                            <div class="swiper-slide">
+                                <div class="testimonial-wrap">
+                                    <div class="testimonial-item">
+                                        <img src="{{ !empty($item->image) ? url('upload/contact_members/' . $item->image) : url('upload/no_image.jpg') }}"
+                                            class="testimonial-img" alt="">
+                                        <h3>{{ $item->name }}</h3>
+                                        <h4>{{ $item->position }}</h4>
+                                        <p>
+                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                            {{ $item->about }}
+                                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        </div><!-- End testimonial item -->
-                        <div class="swiper-slide swiper-slide-active" role="group" aria-label="4 / 5"
-                            style="width: 936px; margin-right: 20px;" data-swiper-slide-index="3">
-                            <div class="testimonial-wrap">
-                                <div class="testimonial-item">
-                                    <img src="{{ asset('frontend/img/testimonials/testimonials-4.jpg') }}"
-                                        class="testimonial-img" alt="">
-                                    <h3>Matt Brandon</h3>
-                                    <h4>Freelancer</h4>
-                                    <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
-                                        fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem
-                                        dolore labore illum veniam.
-                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                    </p>
-                                </div>
-                            </div>
-                        </div><!-- End testimonial item -->
+                            </div><!-- End testimonial item -->
+                        @endforeach
                     </div>
-                    <div
-                        class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
-                        <span class="swiper-pagination-bullet" tabindex="0" role="button"
-                            aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0"
-                            role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet"
-                            tabindex="0" role="button" aria-label="Go to slide 3"></span><span
-                            class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
-                            aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet" tabindex="0"
-                            role="button" aria-label="Go to slide 5"></span>
-                    </div>
-                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                    <div class="swiper-pagination"></div>
                 </div>
-
             </div>
-        </section>
+        </section><!-- End Testimonials Section -->
+
         <section id="contact" class="contact">
             <div class="container" data-aos="fade-up">
                 <div class="row mt-5">
@@ -133,9 +103,7 @@
                             <div class="text-center"><button type="submit">Send Message</button></div>
                         </form>
                     </div>
-
                 </div>
-
             </div>
         </section>
     </main>

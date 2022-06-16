@@ -61,6 +61,9 @@
     <script src="{{ asset('frontend/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
     <script src="{{ asset('frontend/vendor/swiper/swiper-bundle.min.js') }}"></script>
 
+    <!-- JAVASCRIPT -->
+    <script src="{{ asset('backend/libs/jquery/jquery.min.js') }}"></script>
+
     <!-- Template Main JS File -->
     <script src="{{ asset('frontend//js/main.js') }}"></script>
 

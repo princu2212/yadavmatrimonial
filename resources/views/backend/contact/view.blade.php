@@ -1,6 +1,6 @@
 @extends('backend.main')
 @section('title')
-    Messages
+    View Contact Members
 @endsection
 @section('content')
     <div class="page-content">
@@ -10,12 +10,12 @@
             <div class="row">
                 <div class="col-12">
                     <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                        <h4 class="mb-sm-0">Message List</h4>
+                        <h4 class="mb-sm-0">View Contact Members</h4>
 
                         <div class="page-title-right">
                             <ol class="breadcrumb m-0">
                                 <li class="breadcrumb-item"><a href="{{ url('/dashboard') }}">Dashboard</a></li>
-                                <li class="breadcrumb-item active">Message List</li>
+                                <li class="breadcrumb-item active">View Contact Members</li>
                             </ol>
                         </div>
 
@@ -32,28 +32,25 @@
                                 style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                                 <thead>
                                     <tr>
-                                        <th>SNo.</th>
+                                        <th>Image</th>
                                         <th>Name</th>
-                                        <th>Email</th>
+                                        <th>Position</th>
                                         <th>Mobile Number</th>
-                                        <th>Subject</th>
-                                        <th>Message</th>
-                                        <th>Date</th>
+                                        <th>Email</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
 
                                 <tbody>
-                                    @php($i = 1)
-                                    @foreach ($message as $item)
+                                    @foreach ($contact as $item)
                                         <tr>
-                                            <td>{{ $i++ }}</td>
+                                            <td class="text-center"><img
+                                                    src="{{ !empty($item->image) ? url('upload/contact_members/' . $item->image) : url('upload/no_image.jpg') }}"
+                                                    class="rounded" style="width: 40px; height:30px;"></td>
                                             <td>{{ $item->name }}</td>
-                                            <td>{{ $item->email }}</td>
+                                            <td>{{ $item->position }}</td>
                                             <td>{{ $item->phone }}</td>
-                                            <td>{{ $item->subject }}</td>
-                                            <td>{{ $item->message }}</td>
-                                            <td>{{ Carbon\Carbon::parse($item->created_at)->diffForHumans() }}</td>
+                                            <td>{{ $item->email }}</td>
                                             <td>
                                                 <div class="dropdown text-center">
                                                     <a class="dropdown-button" id="dropdown-menu-{{ $item->id }}"
@@ -63,12 +60,12 @@
                                                     <div class="dropdown-menu"
                                                         aria-labelledby="dropdown-menu-{{ $item->id }}">
                                                         <a class="dropdown-item"
-                                                            href="{{ route('message.show', $item->id) }}">
-                                                            <i class="fa fa-eye"></i>
-                                                            {{ trans('View') }}
+                                                            href="{{ route('contact.edit', $item->id) }}">
+                                                            <i class="fa fa-edit"></i>
+                                                            {{ trans('Edit') }}
                                                         </a>
                                                         <form id="delete-{{ $item->id }}"
-                                                            action="{{ route('message.destroy', $item->id) }}"
+                                                            action="{{ route('contact.destroy', $item->id) }}"
                                                             method="POST">
                                                             @method('DELETE')
                                                             @csrf

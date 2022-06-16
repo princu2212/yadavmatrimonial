@@ -3,21 +3,12 @@
         <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                <a href="" class="logo logo-dark">
-                    <span class="logo-sm">
-                        <img src="{{ asset('backend/images/logo-sm.png') }}" alt="logo-sm" height="22">
-                    </span>
-                    <span class="logo-lg">
-                        <img src="{{ asset('backend/images/logo-dark.png') }}" alt="logo-dark" height="20">
-                    </span>
-                </a>
-
                 <a href="" class="logo logo-light">
                     <span class="logo-sm">
-                        <img src="{{ asset('backend/images/logo-sm.png') }}" alt="logo-sm-light" height="22">
+                        <img src="{{ asset('frontend/img/favicon.png') }}" alt="logo-light" height="25">
                     </span>
                     <span class="logo-lg">
-                        <img src="{{ asset('backend/images/logo-light.png') }}" alt="logo-light" height="20">
+                        <img src="{{ asset('frontend/img/favicon.png') }}" alt="logo-light" height="50">
                     </span>
                 </a>
             </div>
@@ -43,7 +34,8 @@
             <div class="dropdown d-inline-block user-dropdown">
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <img class="rounded-circle header-profile-user" src="{{ asset('backend/images/logo-light.png') }}" alt="Header Avatar">
+                    <img class="rounded-circle header-profile-user" src="{{ asset('frontend/img/favicon.png') }}"
+                        alt="Header Avatar">
                     <span class="d-none d-xl-inline-block ms-1"></span>
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
                 </button>

@@ -961,6 +961,7 @@ div#social-links ul li a {
 --------------------------------------------------------------*/
 .testimonials {
     background: #fff;
+    padding-bottom: 40px;
 }
 .testimonials .testimonial-wrap {
     padding-left: 50px;
@@ -1047,6 +1048,7 @@ div#social-links ul li a {
 --------------------------------------------------------------*/
 .contact{
     background: #fff;
+    padding-top: 0;
 }
 .contact .info {
     width: 100%;

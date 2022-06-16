@@ -17,6 +17,7 @@ return [
     // Section Title Start
     'btitle' => 'हाल के समाचार और कार्यक्रम',
     'mtitle' => 'दांपत्य सूची',
+    'ctitle' => 'सामान्य पूछताछ के लिए',
     // Section Title End
 
     // Matrimonial Page Start
