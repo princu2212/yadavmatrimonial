@@ -42,6 +42,16 @@
                                             {{ $item->about }}
                                             <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                         </p>
+                                        <p>
+                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                            @lang('matrimonial.Mobile Number'): {{ $item->phone }}
+                                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                        </p>
+                                        <p>
+                                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                            @lang('matrimonial.Email'): {{ $item->email }}
+                                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                        </p>
                                     </div>
                                 </div>
                             </div><!-- End testimonial item -->
@@ -83,7 +93,8 @@
                             @csrf
                             <div class="row">
                                 <div class="col-md-6 form-group">
-                                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                                    <input type="text" name="name" class="form-control" placeholder="Your Name"
+                                        required>
                                 </div>
                                 <div class="col-md-6 form-group mt-3 mt-lg-0">
                                     <input type="email" class="form-control" name="email" placeholder="Your Email"
@@ -94,7 +105,8 @@
                                         placeholder="Your Mobile Number" required>
                                 </div>
                                 <div class="col-md-6 form-group mt-3">
-                                    <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+                                    <input type="text" class="form-control" name="subject" placeholder="Subject"
+                                        required>
                                 </div>
                             </div>
                             <div class="form-group my-3">
