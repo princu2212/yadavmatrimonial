@@ -13,8 +13,7 @@
                         <div class="container">
                             <h2 class="animate__animated animate__fadeInDown">{{ $item->title }}</h2>
                             <p class="animate__animated animate__fadeInUp">{!! $item->description !!}</p>
-                            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Show
-                                Brides</a>
+                            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">@lang('matrimonial.slidebtn') <i class="bi bi-arrow-right-short"></i></a>
                         </div>
                     </div>
                 </div>

@@ -41,12 +41,12 @@
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">
                     <!-- item-->
-                    <a class="dropdown-item" href=""><i class="ri-user-line align-middle me-1"></i> Profile</a>
-                    <a class="dropdown-item" href=""><i class="ri-wallet-2-line align-middle me-1"></i> Change
+                    <a class="dropdown-item" href="#"><i class="ri-user-line align-middle me-1"></i> Profile</a>
+                    <a class="dropdown-item" href="#"><i class="ri-wallet-2-line align-middle me-1"></i> Change
                         Password</a>
                     <div class="dropdown-divider"></div>
 
-                    <a class="dropdown-item text-danger" href=""><i
+                    <a class="dropdown-item text-danger" href="#"><i
                             class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout</a>
                 </div>
             </div>

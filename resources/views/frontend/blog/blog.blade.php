@@ -29,21 +29,19 @@
                                     class="card-img-top h-75" alt="">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between py-1">
-                                        <p>01 June 2022</p>
+                                        <p>{{ Carbon\Carbon::parse($item->created_at)->format('d-M-Y') }}</p>
                                         <p>Admin</p>
                                     </div>
                                     <a href="{{ route('blog.details', [app()->getLocale(), $item->id]) }}">
-                                        <h5>{{ $item->title }}</h5>
+                                        <h5>{!! Str::limit($item->title, 80) !!}</h5>
                                     </a>
                                 </div>
                             </div>
                         </div>
                     @endforeach
-
                 </div>
                 {{ $blog->links('pagination::bootstrap-5') }}
             </div>
         </section>
-
     </main><!-- End #main -->
 @endsection

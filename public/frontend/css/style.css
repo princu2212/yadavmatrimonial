@@ -862,8 +862,19 @@ color: #777777;
 /*--------------------------------------------------------------
 # Blog Details
 --------------------------------------------------------------*/
-.portfolio-details .portfolio-description h2 {
+.portfolio-details h2 {
     color: #1c385a;
+    margin: 0;
+}
+.portfolio-details .post p {
+    color: #777777;
+    line-height: 20px;
+    font-size: 14px;
+    margin-bottom: 0;
+    padding: 5px;
+}
+.portfolio-details .portfolio-description {
+    padding-top: 10px;
 }
 .portfolio-details .recent_post p {
     color: #777777;
@@ -893,14 +904,38 @@ color: #777777;
         color: #fff;
         text-decoration: none;
 }
-div#social-links ul li {
+
+/* Social Share Links */
+#social-links ul {
+    text-align: end;
+}
+
+#social-links ul li {
     display: inline-block;
 }
 
-div#social-links ul li a {
-    padding: 10px;
+#social-links ul li a {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
     margin: 1px;
-    font-size: 20px;
+    font-size: 25px;
+}
+
+#social-links .fa-facebook-square {
+    color: #0d6efd;
+}
+
+#social-links .fa-twitter {
+    color: deepskyblue;
+}
+
+#social-links .fa-whatsapp {
+    color: #25D366
+}
+
+#social-links .fa-telegram {
+    color: #0088cc;
 }
 /*--------------------------------------------------------------
 # Add Matrimonial

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\AboutController;
 use App\Http\Controllers\Backend\BlogController;
 use App\Http\Controllers\Backend\ContactMemberController;
 use App\Http\Controllers\Backend\MatrimonialController;
@@ -56,6 +57,11 @@ Route::controller(SlideController::class)->group(function () {
     Route::get('/slide/edit/{id}', 'edit')->name('slide.edit');
     Route::put('/slide/update/{id}', 'update')->name('slide.update');
     Route::delete('/slide/destroy/{id}', 'destroy')->name('slide.destroy');
+});
+
+Route::controller(AboutController::class)->group(function () {
+    Route::get('/about/create', 'create')->name('about.create');
+    Route::put('/about/update/{id}', 'update')->name('about.update');
 });
 
 Route::controller(ContactMemberController::class)->group(function () {

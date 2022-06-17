@@ -14,6 +14,8 @@ return [
     'add' => 'Add Bride/Groom',
     // Page Links End
 
+    // Slide
+    'slidebtn' => 'Show Groom/Bride',
     // Section Title Start
     'btitle' => 'Recent News and Events',
     'mtitle' => 'Groom | Bride List',

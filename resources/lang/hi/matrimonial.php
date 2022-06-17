@@ -14,6 +14,8 @@ return [
     'add' => 'दांपत्य जोड़े',
     // Page Links End
 
+    // Slide
+    'slidebtn' => 'दांपत्य देंखे',
     // Section Title Start
     'btitle' => 'हाल के समाचार और कार्यक्रम',
     'mtitle' => 'दांपत्य सूची',

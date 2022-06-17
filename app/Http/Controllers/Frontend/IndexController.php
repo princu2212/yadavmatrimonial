@@ -53,7 +53,8 @@ class IndexController extends Controller
             ->facebook()
             ->twitter()
             ->telegram();
-        return view('frontend.blog.blog_details', compact('blog', 'shareBlog'));
+        $posts = Blog::get();
+        return view('frontend.blog.blog_details', compact('blog', 'shareBlog', 'posts'));
     }
 
     public function aboutUs()

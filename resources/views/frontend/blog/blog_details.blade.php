@@ -1,6 +1,6 @@
 @extends('frontend.main')
 @section('title')
-    Blog Details
+    {{ $blog->title }}
 @endsection
 @php
 $recentblog = App\Models\Blog::latest()
@@ -14,40 +14,35 @@ $recentblog = App\Models\Blog::latest()
         <!-- ======= Breadcrumbs ======= -->
         <section id="breadcrumbs" class="breadcrumbs">
             <div class="container">
-
                 <ol>
                     <li><a href="{{ route('index', app()->getLocale()) }}">@lang('matrimonial.home')</a></li>
                     <li>@lang('matrimonial.blog')</li>
                 </ol>
                 <h2>@lang('matrimonial.blog')</h2>
-
             </div>
         </section><!-- End Breadcrumbs -->
 
         <!-- ======= Portfolio Details Section ======= -->
         <section id="portfolio-details" class="portfolio-details">
             <div class="container">
-
                 <div class="row gy-4">
                     <div class="col-lg-8">
+                        <h2>{{ $blog->title }}</h2>
+                        <div class="d-flex justify-content-between post">
+                            <p>{{ Carbon\Carbon::parse($blog->created_at)->format('d-M-Y') }}</p>
+                            <p>Admin</p>
+                        </div>
                         <div class="portfolio-details-slider swiper">
                             <div class="swiper-wrapper align-items-center">
-
                                 <div class="">
                                     <img src="{{ !empty($blog->image) ? url('upload/blog/' . $blog->image) : url('upload/no_image.jpg') }}"
                                         alt="">
                                 </div>
-
                             </div>
-                        </div>
-                        <div class="d-flex justify-content-between">
-                            <p>{{ Carbon\Carbon::parse($blog->created_at)->toFormattedDateString() }}</p>
-                            <p>Admin</p>
-                            <p>{!! $shareBlog !!}</p>
+                            {{-- <p class="mt-2">{!! $shareBlog !!}</p> --}}
+                            <p class="mt-2">{!! Share::page(url($blog->title))->facebook()->twitter()->whatsapp()->telegram() !!}</p>
                         </div>
                         <div class="portfolio-description">
-
-                            <h2>{{ $blog->title }}</h2>
                             <p>
                                 {!! $blog->description !!}
                             </p>
@@ -63,7 +58,7 @@ $recentblog = App\Models\Blog::latest()
                                 <p>Creative <span>(12)</span></p>
                                 <p>Educaion <span>(16)</span></p>
                             </div> --}}
-                            <div class="recent_post my-5">
+                            <div class="recent_post">
                                 <h3>@lang('matrimonial.btitle')</h3>
                                 <div class="row my-2">
                                     @foreach ($recentblog as $item)
@@ -72,13 +67,12 @@ $recentblog = App\Models\Blog::latest()
                                                 class="w-75 h-75" alt="">
                                         </div>
                                         <div class="col-md-8">
-                                            <a href="">
-                                                <p>{{ $item->title }}</p>
+                                            <a href="{{ route('blog.details', [app()->getLocale(), $item->id]) }}">
+                                                <p>{!! Str::limit($item->title, 80) !!}</p>
                                             </a>
                                             <p>{{ Carbon\Carbon::parse($blog->created_at)->toFormattedDateString() }}</p>
                                         </div>
                                     @endforeach
-
                                 </div>
                             </div>
                             {{-- <div class="tags">
@@ -92,11 +86,8 @@ $recentblog = App\Models\Blog::latest()
                                 </div>
                             </div> --}}
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
         </section><!-- End Portfolio Details Section -->
 

@@ -56,7 +56,7 @@
                         <span>About</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="#"><i class="ri-information-line"></i>About</a></li>
+                        <li><a href="{{ route('about.create') }}"><i class="ri-information-line"></i>About Us</a></li>
                     </ul>
                 </li>
 
@@ -83,11 +83,27 @@
                         <li><a href="{{ route('contact.show') }}"><i class="ri-eye-line"></i>View Members</a></li>
                     </ul>
                 </li>
-                <li><a href="{{ route('message.create') }}"><i class="ri-mail-line"></i>Messages</a></li>
-                <li><a href="{{ route('footer.create') }}"><i class="ri-layout-bottom-line"></i>Footer</a></li>
-
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-mail-line"></i>
+                        <span>Messages</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('message.create') }}"><i class="ri-mail-line"></i>Messages</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript: void(0);" class="has-arrow waves-effect">
+                        <i class="ri-layout-bottom-line"></i>
+                        <span>Footer</span>
+                    </a>
+                    <ul class="sub-menu" aria-expanded="false">
+                        <li><a href="{{ route('footer.create') }}"><i class="ri-layout-bottom-line"></i>Footer</a>
+                        </li>
+                    </ul>
+                </li>
                 <li class="menu-title">Role and Permission</li>
-
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="ri-admin-line"></i>

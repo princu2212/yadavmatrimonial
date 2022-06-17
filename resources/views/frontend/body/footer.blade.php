@@ -35,11 +35,11 @@ $footer = App\Models\Footer::find(1);
                     <h4>Our Services</h4>
                     <ul>
                         <li><i class="bx bx-chevron-right"></i><a
-                                href="{{ route('all.matrimonial', app()->getLocale()) }}">Matrimonial</a></li>
-                        <li><i class="bx bx-chevron-right"></i><a href="khatik-career.php">Event & News</a></li>
-                        <li><i class="bx bx-chevron-right"></i><a href="khatik-community.php">Community Directory</a>
-                        </li>
-                        <li><i class="bx bx-chevron-right"></i><a href="khatik-business.php">Business Directory</a></li>
+                                href="{{ route('all.matrimonial', app()->getLocale()) }}">@lang('matrimonial.matrimonial')</a></li>
+                        <li><i class="bx bx-chevron-right"></i><a href="#matrimonial">@lang('matrimonial.mtitle')</a></li>
+                        <li><i class="bx bx-chevron-right"></i><a href="#blog">@lang('matrimonial.btitle')</a></li>
+                        <li><i class="bx bx-chevron-right"></i><a
+                                href="{{ route('contact', app()->getLocale()) }}">@lang('matrimonial.ctitle')</a></li>
                     </ul>
                 </div>
 
