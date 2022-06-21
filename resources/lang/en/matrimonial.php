@@ -12,6 +12,7 @@ return [
     'en' => 'English',
     'hi' => 'हिन्दी',
     'add' => 'Add Bride/Groom',
+    'View More' => 'View More',
     // Page Links End
 
     // Slide

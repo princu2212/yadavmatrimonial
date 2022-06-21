@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\About;
 use App\Models\Blog;
 use App\Models\Matrimonial;
 use App\Models\Slide;
@@ -15,7 +16,8 @@ class IndexController extends Controller
         $slide = Slide::latest()->get();
         $matrimonial = Matrimonial::latest()->limit(8)->get();
         $blog = Blog::latest()->limit(3)->get();
-        return view('frontend.index', compact('slide', 'matrimonial', 'blog'));
+        $aboutUs = About::find(1);
+        return view('frontend.index', compact('slide', 'matrimonial', 'blog', 'aboutUs'));
     }
 
     public function allMatrimonial()

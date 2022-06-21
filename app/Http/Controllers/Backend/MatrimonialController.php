@@ -65,7 +65,7 @@ class MatrimonialController extends Controller
             'alert-type' => 'success'
         );
 
-        return redirect()->route('matrimonial.show')->with($notification);
+        return redirect()->back()->with($notification);
     }
 
     public function show()

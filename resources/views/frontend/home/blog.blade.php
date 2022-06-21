@@ -25,7 +25,7 @@
             @endforeach
         </div>
         <div class="view-more text-center">
-            <a href="{{ route('all.blog', app()->getLocale()) }}" class="btn-view-more">View More</a>
+            <a href="{{ route('all.blog', app()->getLocale()) }}" class="btn-view-more">@lang('matrimonial.View More')</a>
         </div>
     </div>
 </section>

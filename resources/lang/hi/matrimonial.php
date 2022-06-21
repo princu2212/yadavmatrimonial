@@ -12,6 +12,7 @@ return [
     'en' => 'English',
     'hi' => 'हिन्दी',
     'add' => 'दांपत्य जोड़े',
+    'View More' => 'और देखे',
     // Page Links End
 
     // Slide
