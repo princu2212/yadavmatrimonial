@@ -12,44 +12,12 @@
             font-family: Verdana, Arial, sans-serif;
         }
 
-        table {
-            font-size: x-small;
-        }
-
-        tfoot tr td {
-            font-weight: bold;
-            font-size: x-small;
-        }
-
-        .gray {
-            background-color: lightgray
-        }
-
         .font {
             font-size: 14px;
         }
 
-        .authority {
-            float: right
-        }
-
-        .authority h5 {
-            margin-top: -10px;
-            color: green;
-            margin-left: 35px;
-        }
-
         p {
             font-size: 13px;
-        }
-
-        .thanks p {
-            color: green;
-            ;
-            font-size: 16px;
-            font-weight: normal;
-            font-family: serif;
-            margin-top: 20px;
         }
 
         .detailed-profile {
@@ -62,6 +30,9 @@
 
         .details td {
             font-size: 15px;
+            max-width: 100px;
+            text-overflow: clip;
+            white-space: nowrap;
         }
     </style>
 </head>
