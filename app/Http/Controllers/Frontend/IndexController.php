@@ -13,7 +13,7 @@ class IndexController extends Controller
 {
     public function index()
     {
-        $slide = Slide::latest()->get();
+        $slide = Slide::get();
         $matrimonial = Matrimonial::latest()->limit(8)->get();
         $blog = Blog::latest()->limit(3)->get();
         $aboutUs = About::find(1);
