@@ -72,10 +72,10 @@ class IndexController extends Controller
     public function download($language, $id = null)
     {
         $matrimonial = Matrimonial::find($id);
-        $pdf = PDF::loadView('frontend.matrimonial.download', compact('matrimonial'))->setPaper('a4')->setOptions([
-            'tempDir' => public_path(),
-            'chroot' => public_path(),
+        $pdf = PDF::loadView('frontend.matrimonial.download', compact('matrimonial'))->setOptions([
+            'tempDir' => storage_path(),
+            'chroot' => storage_path(),
         ]);
-        return $pdf->download('matrimonial.pdf');
+        return $pdf->download($matrimonial->name.'.pdf');
     }
 }
