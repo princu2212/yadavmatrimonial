@@ -37,7 +37,14 @@ class IndexController extends Controller
     {
 
         $matrimonial = Matrimonial::find($id);
-        return view('frontend.matrimonial.matrimonial_details', compact('matrimonial'));
+        $shareMatrimonial = \Share::page(
+            'https://yadavmatrimonial.princeyadav.in/',
+            'Your share text comes here',
+        )
+            ->whatsapp()
+            ->facebook()
+            ->telegram();
+        return view('frontend.matrimonial.matrimonial_details', compact('matrimonial', 'shareMatrimonial'));
     }
 
     public function allBlog()
@@ -50,12 +57,11 @@ class IndexController extends Controller
     {
         $blog = Blog::find($id);
         $shareBlog = \Share::page(
-            'https://princeyadav.net/yadavfamily/member/',
+            'https://yadavmatrimonial.princeyadav.in/',
             'Your share text comes here',
         )
             ->whatsapp()
             ->facebook()
-            ->twitter()
             ->telegram();
         $posts = Blog::get();
         return view('frontend.blog.blog_details', compact('blog', 'shareBlog', 'posts'));

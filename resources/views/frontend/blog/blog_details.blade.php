@@ -40,7 +40,7 @@ $recentblog = App\Models\Blog::latest()
                                 </div>
                             </div>
                             {{-- <p class="mt-2">{!! $shareBlog !!}</p> --}}
-                            <p class="mt-2">{!! Share::page(url($blog->title))->facebook()->twitter()->whatsapp()->telegram() !!}</p>
+                            <p class="mt-2">{!! Share::page(url($blog->title))->facebook()->whatsapp()->telegram() !!}</p>
                         </div>
                         <div class="portfolio-description">
                             <p>

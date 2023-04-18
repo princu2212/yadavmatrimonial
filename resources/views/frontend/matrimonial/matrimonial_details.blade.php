@@ -2,8 +2,8 @@
 @section('title')
     Groom | Bride Details
 @endsection
-
 @section('content')
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <main id="main">
 
         <!-- ======= Breadcrumbs ======= -->
@@ -32,16 +32,19 @@
                             <a href="{{ route('matrimonial.download', [app()->getLocale(), $matrimonial->id]) }}"
                                 class="common-button">Download
                                 Profile</a>
+
                         </div>
                     </div>
 
                     <div class="col-lg-9">
                         <div class="portfolio-info">
-                            <h3>{{ $matrimonial->name }}</h3>
+                            <div class="d-flex justify-content-between">
+                                <h3>{{ $matrimonial->name }}</h3>
+                                <p class="mt-2">{!! Share::page(url($matrimonial->name))->facebook()->whatsapp()->telegram() !!}</p>
+                            </div>
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-6 d-flex">
-                                        <i class="fa-solid fa-user"></i>
                                         <h6>@lang('matrimonial.age')
                                             {!! $matrimonial->date_of_birth == ''
                                                 ? $matrimonial->age
@@ -49,29 +52,24 @@
                                             | @lang('matrimonial.Height'): {{ $matrimonial->height }}</h6>
                                     </div>
                                     <div class="col-md-6 d-flex">
-                                        <i class="fa-solid fa-graduation-cap"></i>
                                         <h6>@lang('matrimonial.Education'): {{ $matrimonial->education }}</h6>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 d-flex">
-                                        <i class="fa-solid fa-user"> </i>
                                         <h6>@lang('matrimonial.Marital Status'):
                                             {{ $matrimonial->marital_status }}</h6>
                                     </div>
                                     <div class="col-md-6 d-flex">
-                                        <i class="fa-solid fa-briefcase"></i>
                                         <h6>@lang('matrimonial.Job Details'): {{ $matrimonial->work }}</h6>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 d-flex">
-                                        <i class="fa-solid fa-om"></i>
                                         <h6>@lang('matrimonial.Gotra'): {{ $matrimonial->gotra }}</h6>
                                     </div>
                                     <div class="col-md-6 d-flex">
-                                        <i class="fa-solid fa-location-dot"></i>
-                                        <h6>@lang('matrimonial.Permanent Address'): {{ $matrimonial->permanent_address }}</h6>
+                                        <h6>@lang('matrimonial.Address'): {{ $matrimonial->address }}</h6>
                                     </div>
                                 </div>
                             </div>
@@ -81,7 +79,6 @@
                             <h3>@lang('matrimonial.Detailed Profile') -</h3>
                             <div class="container">
                                 <div class="d-flex pt-4">
-                                    <i class="fa-solid fa-circle-info"></i>
                                     <h4>@lang('matrimonial.Basic Info')</h4>
                                 </div>
                                 <div class="row px-5">
@@ -113,7 +110,6 @@
                                     </div>
                                 </div>
                                 <div class="d-flex pt-4">
-                                    <i class="fa-solid fa-location-dot"></i>
                                     <h4>@lang('matrimonial.Contact Details')</h4>
                                 </div>
                                 <div class="row px-5">
@@ -135,7 +131,6 @@
                                     </div>
                                 </div>
                                 <div class="d-flex pt-4">
-                                    <i class="fa-solid fa-graduation-cap"></i>
                                     <h4>@lang('matrimonial.Education and Profession')</h4>
                                 </div>
                                 <div class="row px-5">
@@ -149,7 +144,6 @@
                                     </div>
                                 </div>
                                 <div class="d-flex pt-4">
-                                    <i class="fa-solid fa-people-roof"></i>
                                     <h4>@lang('matrimonial.Family Details')</h4>
                                 </div>
                                 <div class="row px-5">
