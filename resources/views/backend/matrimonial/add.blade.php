@@ -114,41 +114,14 @@
                                     <div class="col-md-4">
                                         <div class="mb-3">
                                             <label for="gotra" class="form-label">Gotra</label>
-                                            <input type="text" class="form-control" name="gotra" placeholder="Gotra">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
-                                            <label for="address" class="form-label">Address <span
-                                                    class="text-danger">*</span></label>
-                                            <input type="text" class="form-control" name="address"
-                                                placeholder="Enter Address" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
-                                            <label for="about" class="form-label">About</label>
-                                            <textarea type="text" class="form-control" name="about" placeholder="Enter About"></textarea>
+                                            <input type="text" class="form-control" name="gotra"
+                                                placeholder="Gotra">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="mb-3">
                                             <label for="dob" class="form-label">Date of Birth</label>
                                             <input type="date" class="form-control" name="dob">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
-                                            <label for="birth_time" class="form-label">Birth Time</label>
-                                            <input type="time" class="form-control" name="birth_time"
-                                                placeholder="Enter Birth Time">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
-                                            <label for="birth_place" class="form-label">Birth Place</label>
-                                            <input type="text" class="form-control" name="birth_place"
-                                                placeholder="Enter Birth Place">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -160,23 +133,10 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="mb-3">
-                                            <label for="village" class="form-label">Village/Town <span
+                                            <label for="village" class="form-label">Village/City <span
                                                     class="text-danger">*</span></label>
                                             <input type="text" class="form-control" name="village"
-                                                placeholder="Enter Village/Town" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
-                                            <label for="block" class="form-label">Block</label>
-                                            <input type="text" class="form-control" name="block"
-                                                placeholder="Enter Block">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
-                                            <label for="city" class="form-label">City</label>
-                                            <input type="text" class="form-control" name="city" placeholder="Enter City">
+                                                placeholder="Enter Village/City" required>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -189,18 +149,10 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="mb-3">
-                                            <label for="curr_address" class="form-label">Current Address <span
+                                            <label for="address" class="form-label">Address <span
                                                     class="text-danger">*</span></label>
-                                            <input type="text" class="form-control" name="curr_address"
-                                                placeholder="Enter Current Address" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
-                                            <label for="per_address" class="form-label">Permanent Address <span
-                                                    class="text-danger">*</span></label>
-                                            <input type="text" class="form-control" name="per_address"
-                                                placeholder="Enter Permanent Address" required>
+                                            <input type="text" class="form-control" name="address"
+                                                placeholder="Enter Address" required>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -217,34 +169,6 @@
                                                     class="text-danger">*</span></label>
                                             <input type="text" class="form-control" name="mothers_name"
                                                 placeholder="Enter Mother's Name" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
-                                            <label for="dada_name" class="form-label">Dada Name</label>
-                                            <input type="text" class="form-control" name="dada_name"
-                                                placeholder="Enter Dada Name">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
-                                            <label for="dadi_name" class="form-label">Dadi Name</label>
-                                            <input type="text" class="form-control" name="dadi_name"
-                                                placeholder="Enter Dadi Name">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
-                                            <label for="nana_name" class="form-label">Nana Name</label>
-                                            <input type="text" class="form-control" name="nana_name"
-                                                placeholder="Enter Nana Name">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
-                                            <label for="nani_name" class="form-label">Nani Name</label>
-                                            <input type="text" class="form-control" name="nani_name"
-                                                placeholder="Enter Nani Name">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -273,25 +197,20 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="mb-3">
-                                            <label for="hobby" class="form-label">Hobbies</label>
-                                            <input type="text" class="form-control" name="hobby"
-                                                placeholder="Enter Hobbies">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
                                             <label for="image" class="form-label">Image</label>
                                             <input type="file" class="form-control" id="image" name="image">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
                                         <div class="mb-3">
-                                            <img id="showImage" class="rounded avatar-lg" src="" alt="Card image cap">
+                                            <img id="showImage" class="rounded avatar-lg" src=""
+                                                alt="Card image cap">
                                         </div>
                                     </div>
                                 </div>
                                 <!-- end row -->
-                                <input type="submit" class="btn btn-primary waves-effect waves-light mt-2" value="Submit">
+                                <input type="submit" class="btn btn-primary waves-effect waves-light mt-2"
+                                    value="Submit">
                             </form>
                         </div>
                     </div>

@@ -5,7 +5,7 @@
 
 @section('content')
     @php
-    $members = App\Models\ContactMember::latest()->get();
+        $members = App\Models\ContactMember::latest()->get();
     @endphp
     <main id="main">
 
@@ -70,7 +70,7 @@
                         <div class="info">
                             <div class="address">
                                 <i class="bx bx-map"></i>
-                                <h4>@lang('matrimonial.Location'):</h4>
+                                <h4>@lang('matrimonial.Address'):</h4>
                                 <p>Mahadev Ghat, Raipur Chhattisgarh </p>
                             </div>
 

@@ -183,37 +183,9 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="mb-3">
-                                            <label for="address" class="form-label">Address <span
-                                                    class="text-danger">*</span></label>
-                                            <input type="text" class="form-control" value="{{ $matrimonial->address }}"
-                                                name="address" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
-                                            <label for="about" class="form-label">About</label>
-                                            <textarea class="form-control" name="about">{{ $matrimonial->about }}</textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
                                             <label for="dob" class="form-label">Date of Birth</label>
                                             <input type="date" class="form-control"
                                                 value="{{ $matrimonial->date_of_birth }}" name="dob">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
-                                            <label for="birth_time" class="form-label">Birth Time</label>
-                                            <input type="time" class="form-control"
-                                                value="{{ $matrimonial->birth_time }}" name="birth_time">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
-                                            <label for="birth_place" class="form-label">Birth Place</label>
-                                            <input type="text" class="form-control"
-                                                value="{{ $matrimonial->birth_place }}" name="birth_place">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -225,24 +197,10 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="mb-3">
-                                            <label for="village" class="form-label">Village/Town <span
+                                            <label for="village" class="form-label">Village/City <span
                                                     class="text-danger">*</span></label>
-                                            <input type="text" class="form-control" value="{{ $matrimonial->village }}"
-                                                name="village" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
-                                            <label for="block" class="form-label">Block</label>
-                                            <input type="text" class="form-control" value="{{ $matrimonial->block }}"
-                                                name="block">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
-                                            <label for="city" class="form-label">City</label>
-                                            <input type="text" class="form-control" value="{{ $matrimonial->city }}"
-                                                name="city">
+                                            <input type="text" class="form-control"
+                                                value="{{ $matrimonial->village }}" name="village" required>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -255,19 +213,10 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="mb-3">
-                                            <label for="curr_address" class="form-label">Current Address <span
+                                            <label for="address" class="form-label"> Address <span
                                                     class="text-danger">*</span></label>
                                             <input type="text" class="form-control"
-                                                value="{{ $matrimonial->current_address }}" name="curr_address" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
-                                            <label for="per_address" class="form-label">Permanent Address <span
-                                                    class="text-danger">*</span></label>
-                                            <input type="text" class="form-control"
-                                                value="{{ $matrimonial->permanent_address }}" name="per_address"
-                                                required>
+                                                value="{{ $matrimonial->address }}" name="address" required>
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -284,34 +233,6 @@
                                                     class="text-danger">*</span></label>
                                             <input type="text" class="form-control"
                                                 value="{{ $matrimonial->mothers_name }}" name="mothers_name" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
-                                            <label for="dada_name" class="form-label">Dada Name</label>
-                                            <input type="text" class="form-control"
-                                                value="{{ $matrimonial->dada_name }}" name="dada_name">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
-                                            <label for="dadi_name" class="form-label">Dadi Name</label>
-                                            <input type="text" class="form-control"
-                                                value="{{ $matrimonial->dadi_name }}" name="dadi_name">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
-                                            <label for="nana_name" class="form-label">Nana Name</label>
-                                            <input type="text" class="form-control"
-                                                value="{{ $matrimonial->nana_name }}" name="nana_name">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
-                                            <label for="nani_name" class="form-label">Nani Name</label>
-                                            <input type="text" class="form-control"
-                                                value="{{ $matrimonial->nani_name }}" name="nani_name">
                                         </div>
                                     </div>
                                     <div class="col-md-4">
@@ -341,13 +262,6 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="mb-3">
-                                            <label for="hobby" class="form-label">Hobbies</label>
-                                            <input type="text" class="form-control" value="{{ $matrimonial->hobby }}"
-                                                name="hobby">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="mb-3">
                                             <label for="image" class="form-label">Image</label>
                                             <input type="file" class="form-control" id="image" name="image">
                                         </div>
@@ -361,7 +275,8 @@
                                     </div>
                                 </div>
                                 <!-- end row -->
-                                <input type="submit" class="btn btn-primary waves-effect waves-light mt-2" value="Submit">
+                                <input type="submit" class="btn btn-primary waves-effect waves-light mt-2"
+                                    value="Submit">
                             </form>
                         </div>
                     </div>

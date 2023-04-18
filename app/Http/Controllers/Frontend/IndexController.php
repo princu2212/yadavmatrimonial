@@ -7,7 +7,9 @@ use App\Models\About;
 use App\Models\Blog;
 use App\Models\Matrimonial;
 use App\Models\Slide;
-use PDF;
+use Illuminate\Support\Facades\Storage;
+// use PDF;
+use \Mpdf\Mpdf as PDF;
 
 class IndexController extends Controller
 {
@@ -72,10 +74,34 @@ class IndexController extends Controller
     public function download($language, $id = null)
     {
         $matrimonial = Matrimonial::find($id);
-        $pdf = PDF::loadView('frontend.matrimonial.download', compact('matrimonial'))->setOptions([
-            'tempDir' => storage_path(),
-            'chroot' => storage_path(),
+        // $pdf = PDF::loadView('frontend.matrimonial.download', compact('matrimonial'))->setOptions([
+        //     'tempDir' => storage_path(),
+        //     'chroot' => storage_path(),
+        // ]);
+        // return $pdf->download($matrimonial->name.'.pdf');
+
+        // Create the mPDF document
+        $document = new PDF([
+            'mode' => 'utf-8',
+            'format' => 'A4',
         ]);
-        return $pdf->download($matrimonial->name.'.pdf');
+
+        $document->autoScriptToLang = true;
+        $document->autoLangToFont = true;
+        // Setup a filename
+        $documentFileName = "$matrimonial->name.pdf";
+
+        // Set some header informations for output
+        $header = [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'inline; filename="' . $documentFileName . '"'
+        ];
+
+        $document->WriteHTML(view('frontend.matrimonial.download', compact('matrimonial')));
+        // Save PDF on your public storage
+        Storage::disk('public')->put($documentFileName, $document->Output($documentFileName, "S"));
+
+        // Get file back from storage with the give header informations
+        return Storage::disk('public')->download($documentFileName, 'Request', $header); //
     }
 }

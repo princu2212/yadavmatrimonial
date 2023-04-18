@@ -27,28 +27,16 @@ class MatrimonialController extends Controller
         $matrimonial->work = $request->work;
         $matrimonial->phone = $request->phone;
         $matrimonial->gotra = $request->gotra;
-        $matrimonial->address = $request->address;
-        $matrimonial->about = $request->about;
         $matrimonial->date_of_birth = $request->dob;
-        $matrimonial->birth_time = $request->birth_time;
-        $matrimonial->birth_place = $request->birth_place;
         $matrimonial->rashi = $request->rashi;
         $matrimonial->village = $request->village;
-        $matrimonial->block = $request->block;
-        $matrimonial->city = $request->city;
         $matrimonial->district = $request->district;
-        $matrimonial->current_address = $request->curr_address;
-        $matrimonial->permanent_address = $request->per_address;
+        $matrimonial->address = $request->address;
         $matrimonial->fathers_name = $request->fathers_name;
         $matrimonial->mothers_name = $request->mothers_name;
-        $matrimonial->dada_name = $request->dada_name;
-        $matrimonial->dadi_name = $request->dadi_name;
-        $matrimonial->nana_name = $request->nana_name;
-        $matrimonial->nani_name = $request->nani_name;
         $matrimonial->total_members = $request->total_member;
         $matrimonial->no_of_brothers = $request->no_of_brothers;
         $matrimonial->no_of_sisters = $request->no_of_sisters;
-        $matrimonial->hobby = $request->hobby;
 
         if ($request->file('image')) {
             $file = $request->file('image');
@@ -92,28 +80,16 @@ class MatrimonialController extends Controller
         $matrimonial->work = $request->work;
         $matrimonial->phone = $request->phone;
         $matrimonial->gotra = $request->gotra;
-        $matrimonial->address = $request->address;
-        $matrimonial->about = $request->about;
         $matrimonial->date_of_birth = $request->dob;
-        $matrimonial->birth_time = $request->birth_time;
-        $matrimonial->birth_place = $request->birth_place;
         $matrimonial->rashi = $request->rashi;
         $matrimonial->village = $request->village;
-        $matrimonial->block = $request->block;
-        $matrimonial->city = $request->city;
         $matrimonial->district = $request->district;
-        $matrimonial->current_address = $request->curr_address;
-        $matrimonial->permanent_address = $request->per_address;
+        $matrimonial->address = $request->address;
         $matrimonial->fathers_name = $request->fathers_name;
         $matrimonial->mothers_name = $request->mothers_name;
-        $matrimonial->dada_name = $request->dada_name;
-        $matrimonial->dadi_name = $request->dadi_name;
-        $matrimonial->nana_name = $request->nana_name;
-        $matrimonial->nani_name = $request->nani_name;
         $matrimonial->total_members = $request->total_member;
         $matrimonial->no_of_brothers = $request->no_of_brothers;
         $matrimonial->no_of_sisters = $request->no_of_sisters;
-        $matrimonial->hobby = $request->hobby;
 
         if ($request->file('image')) {
             $file = $request->file('image');
