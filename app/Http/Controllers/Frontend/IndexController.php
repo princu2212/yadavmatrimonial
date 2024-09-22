@@ -37,12 +37,10 @@ class IndexController extends Controller
     {
 
         $matrimonial = Matrimonial::find($id);
-        $shareMatrimonial = \Share::page(
-            'https://yadavmatrimonial.princeyadav.in/',
-            'Your share text comes here',
-        )
+        $shareMatrimonial = \Share::currentPage()
             ->whatsapp()
             ->facebook()
+            ->twitter()
             ->telegram();
         return view('frontend.matrimonial.matrimonial_details', compact('matrimonial', 'shareMatrimonial'));
     }
@@ -56,15 +54,12 @@ class IndexController extends Controller
     public function blogDetails($language, $id = null)
     {
         $blog = Blog::find($id);
-        $shareBlog = \Share::page(
-            'https://yadavmatrimonial.princeyadav.in/',
-            'Your share text comes here',
-        )
+        $shareBlog = \Share::currentPage()
             ->whatsapp()
             ->facebook()
+            ->twitter()
             ->telegram();
-        $posts = Blog::get();
-        return view('frontend.blog.blog_details', compact('blog', 'shareBlog', 'posts'));
+        return view('frontend.blog.blog_details', compact('blog', 'shareBlog'));
     }
 
     public function aboutUs()

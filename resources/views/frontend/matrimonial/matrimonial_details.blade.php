@@ -1,6 +1,15 @@
 @extends('frontend.main')
 @section('title')
-    Groom | Bride Details
+    {{ $matrimonial->name }}
+@endsection
+@section('share')
+    <meta property="og:title" content="{{ $matrimonial->name }}" />
+    <meta property="og:name" content="{{ $matrimonial->name }}" />
+    <meta property="og:image" content="{{ $matrimonial->image }}">
+    <meta property="og:address" content="{{ $matrimonial->address }}" />
+    <meta property="og:url"
+        content="https://yadavmatrimonial.princeyadav.in/hi/matrimonial/details/.{{ $matrimonial->id }}" />
+    <meta property="og:type" content="website" />
 @endsection
 @section('content')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
@@ -40,7 +49,8 @@
                         <div class="portfolio-info">
                             <div class="d-flex justify-content-between">
                                 <h3>{{ $matrimonial->name }}</h3>
-                                <p class="mt-2">{!! Share::page(url($matrimonial->name))->facebook()->whatsapp()->telegram() !!}</p>
+                                <p class="mt-2">{!! $shareMatrimonial !!}</p>
+                                {{-- <p class="mt-2">{!! Share::page(url('hi/matrimonial/details', $matrimonial->id))->whatsapp()->facebook()->telegram() !!}</p> --}}
                             </div>
                             <div class="container">
                                 <div class="row">
@@ -179,4 +189,7 @@
         </section><!-- End Portfolio Details Section -->
 
     </main><!-- End #main -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <script src="{{ asset('js/share.js') }}"></script>
 @endsection

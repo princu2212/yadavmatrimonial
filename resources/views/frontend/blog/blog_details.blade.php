@@ -2,10 +2,16 @@
 @section('title')
     {{ $blog->title }}
 @endsection
+@section('share')
+    <meta property="og:title" content="{{ $blog->title }}" />
+    <meta property="og:image" content="url{{ 'upload/blog/' . $blog->image }}">
+    <meta property="og:description" content="{{ $blog->description }}" />
+    <meta property="og:type" content="website" />
+@endsection
 @php
-$recentblog = App\Models\Blog::latest()
-    ->limit(5)
-    ->get();
+    $recentblog = App\Models\Blog::latest()
+        ->limit(5)
+        ->get();
 @endphp
 @section('content')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
@@ -39,8 +45,8 @@ $recentblog = App\Models\Blog::latest()
                                         alt="">
                                 </div>
                             </div>
-                            {{-- <p class="mt-2">{!! $shareBlog !!}</p> --}}
-                            <p class="mt-2">{!! Share::page(url($blog->title))->facebook()->whatsapp()->telegram() !!}</p>
+                            <p class="mt-2">{!! $shareBlog !!}</p>
+                            {{-- <p class="mt-2">{!! Share::page(url($blog->title))->facebook()->whatsapp()->telegram() !!}</p> --}}
                         </div>
                         <div class="portfolio-description">
                             <p>

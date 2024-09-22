@@ -53,7 +53,7 @@ return [
     'No. of Sisters' => 'No. of Sisters',
     'Lifestyle, Interests and more' => 'Lifestyle, Interests and more',
     'profile' => 'View Profile',
-    'Resume' => 'Resume',
+    'Resume' => 'Bio Data',
     // Matrimonial Page End
 
     // Blog Page Start

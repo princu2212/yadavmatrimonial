@@ -6,8 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>@yield('title')</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    @yield('share')
 
     <!-- Favicons -->
     <link href="{{ asset('frontend/img/favicon.png') }}" rel="icon">
